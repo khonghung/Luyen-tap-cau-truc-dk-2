@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá Điện hộ gia đình</title>
+</head>
+<body>
+<h1>số tiền điện tháng 7</h1>
+<script>
+    let sodien = parseInt(prompt("số điện"))
+    let sotien = 0
+    if (sodien <= 50) {
+        sotien = sodien * 1000
+    } else if (50 <= sodien && sodien <= 100) {
+        sotien = (sodien * 1000) + (sodien - 50) * 1500
+    } else if (100 <= sodien && sodien <= 200) {
+        sotien = (sodien * 1000) + (sodien * 1500) + (sodien - 100) * 2000
+    } else {
+        (sodien * 1000) + (sodien * 1500) + (sodien * 2000) + (sodien - 100)* 2500
+    }
+    document.write("số điện hiện tại  " + sodien + "<br/>")
+    document.write("số tiền điện phải trả là  " + sotien)
+</script>
+</body>
+</html>
